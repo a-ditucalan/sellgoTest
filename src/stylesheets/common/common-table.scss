@@ -1,19 +1,20 @@
 .ui.unstackable.table{
+  width: 1450px;
+
+  border: none !important;
   border-collapse: separate;
   border-spacing: 0;
-  border: none !important;
-  width: 1450px;
 }
 
 .ui.table tr:first-child td {
-  box-shadow: 0px 3px 3px #DFE8F329;
-  border: 0.5px solid #707070;
-  border-style: solid none solid none;
+  border: .5px solid #707070;
+  border-style: solid none;
+  box-shadow: 0 3px 3px #dfe8f329;
 }
 
 tr:first-child td:first-child {
+  border-left: .5px solid #707070 !important;
   border-top-left-radius: 10px;
-  border-left: 0.5px solid #707070 !important;
 }
 
 td.product-wrapper {
@@ -25,24 +26,25 @@ td.product-wrapper {
 }
 
 td.common-check {
+  padding: .78571429em .285714em;
   max-width: 30px;
-  padding: .78571429em 0.285714em;
 }
 
 .pop-up-menu {
-  align-items: center;
-  height: 65px;
-  justify-content: space-between;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
   align-items: center;
+  height: 65px;
 }
 
 td.common-data {
-  min-width: 15px;
-  text-align: center !important;
   padding: .18571429em .78571429em;
+  min-width: 15px;
   height: 100px;
+
+  text-align: center !important;
   
   &:last-child {
     padding: 0 .78571429em !important;  
@@ -62,8 +64,8 @@ tr:last-child td:first-child {
 }
 
 tr:last-child td:last-child {
+  border-right: .5px solid #707070 !important;
   border-bottom-right-radius: 10px;
-  border-right: 0.5px solid #707070 !important;
 }
 
 tr:first-child td {
@@ -83,10 +85,11 @@ tr td:first-child {
 
 .tbl-title {
   margin-bottom: 0;
-  font-weight: 500;
-  font-size: 14px;
+
   font-family: 'Work Sans', sans-serif;
-  color: #5381DB;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5381db;
 }
 
 .title-sub-wrapper {
@@ -95,8 +98,8 @@ tr td:first-child {
 
   .img-box {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
 
   .icon-wrapper {
@@ -116,15 +119,17 @@ tr td:first-child {
 }
 
 .common-data {
-  font-weight: 400;
-  font-size: 16px;
   font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
+
 @include respond-to(xl) {
   .table-wrapper {
     overflow-x: scroll;
   }
 }
+
 @include respond-to(lg-down) {
   .table-wrapper {
     overflow-x: scroll;
